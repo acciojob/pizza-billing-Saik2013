@@ -36,6 +36,7 @@ public class Pizza {
         this.hasExtraCheese = false;
         this.hasExtraToppings = false;
         this.hasTakeAway = false;
+        this.isBillFinalised = false;
 
         //added to string builder
         this.bill = new StringBuilder();
