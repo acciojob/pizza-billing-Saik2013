@@ -12,6 +12,7 @@ public class Pizza {
     private boolean hasExtraCheese;
     private boolean hasExtraToppings;
     private boolean hasTakeAway;
+    private boolean isBillFinalised;
     private StringBuilder bill;
 
     //constructor
@@ -75,7 +76,11 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        this.bill.append("Paperbag Added: ").append(this.totalPrice).append("\n");
+        if(!isBillFinalised) {
+            this.bill.append("Total Price: ").append(this.totalPrice).append("\n");
+            this.isBillFinalised = true;
+
+        }
         return this.bill.toString();
     }
 }
